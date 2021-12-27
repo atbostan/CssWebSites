@@ -14,7 +14,7 @@ html,body{
 }
 
 a{
-    color:#333;
+    color:#272323;
     text-decoration: none;
 }
 
@@ -47,7 +47,7 @@ p{
 
 .btn{ /*convert to a tag to a button*/
     display: inline-block;
-    background: #333;
+    background: #272323;
     padding: 10px;
     border-radius: 5px;
     color:snow;
@@ -58,35 +58,35 @@ p{
 
 .btn:hover{
     background: #f7c08a;
-    color: #333;
+    color: #272323;
 }
 
 .btn-light{
     background: snow;
-    color: #333;
+    color: #272323;
 }
 
 .bg-primary{
     background-color: #f7c08a;
-    color: #333;
+    color: #272323;
 
 }
 
 .bg-light{
     background-color: snow;
-    color: #333;
+    color: #272323;
 
 }
 
 .bg-dark{
-    background-color: #444;
+    background-color: #272323;
     color: snow;
 
 }
 /*Nav-Bar*/
 
 #navbar{
-    background: #333;
+    background: #272323;
     color:snow;
     overflow: auto;
 }
