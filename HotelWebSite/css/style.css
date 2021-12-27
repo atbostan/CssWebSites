@@ -173,3 +173,15 @@ p{
 #home-info .info-content p{
     padding-bottom: 30px;
 }
+
+#features{
+    height: 400px;
+}
+
+.box{ /*Make 3 boxes on one row*/
+    float: left;
+    width: 33.3%;
+    padding: 50px;
+    text-align: center;
+
+}
