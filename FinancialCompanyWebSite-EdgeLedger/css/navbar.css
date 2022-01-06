@@ -1,0 +1,39 @@
+/*Navbar*/
+
+.navbar {
+    display:flex;
+    align-items: center;
+    justify-content:space-between ;
+    background-color: #333 ;
+    color: snow;
+    opacity: 0.9;
+    width: 100%;
+    height: 70px; /*Common for nav bar*/
+    position: fixed;
+    top: 0px;
+    padding: 0 30px;
+    z-index: 15;
+
+}
+
+.navbar a {
+    color:snow;
+    padding: 10px 20px;
+    margin: 0px 5 px;
+
+}
+
+.navbar a:hover{
+    border-bottom: #25a745 2px solid;
+    font-weight: 600;
+}
+
+.navbar ul {
+    display: flex;
+
+}
+
+
+.navbar .logo {
+    font-weight:400 ;
+}

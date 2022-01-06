@@ -1,0 +1,126 @@
+/*Text Styles*/
+
+.text-primary{
+    color : #25a745
+}
+
+.text-secondary{
+    color: #0284d0
+}
+
+/*Buttons*/
+
+.btn {
+    cursor : pointer;
+    display: inline-block;
+    padding: 10px 30px;
+
+    border:none;
+    border-radius: 5px;
+}
+.btn:hover {
+    opacity: 0.9;
+}
+
+
+.btn-primary {
+    color:snow;
+    background-color: #28a745;
+}
+
+.btn-secondary{
+    color:snow;
+    background-color: #0284d0;
+}
+
+.btn-dark{
+    color:snow;
+    background-color: #333;
+}
+
+.btn-light{
+    color:black;
+    background-color:rgb(216, 216, 216);
+}   
+
+.bg-primary{
+    color:snow;
+    background-color: #28a745;
+}
+
+.bg-secondary{
+    color:snow;
+    background-color: #0284d0;
+}
+
+.bg-dark{
+    color:snow;
+    background-color: #333;
+}
+
+.bg-light{
+    color:black;
+    background-color:rgb(216, 216, 216);
+}
+.icons{
+    padding: 30px;
+}
+
+.icons h3 {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.icons i {
+    background-color: #28a745;
+    color : snow;
+    padding: 1rem;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+.flex-items{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+}
+
+.flex-items > div { /*Padding for child divs*/
+    padding: 20px;
+
+}
+
+/*Flex Columns*/
+.flex-columns .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.flex-columns .column{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+
+.flex-columns .column .column-1,
+.flex-columns .column .column-2{
+    height: 100%;
+}
+
+.flex-columns img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.flex-columns .column-2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 30px;
+}
