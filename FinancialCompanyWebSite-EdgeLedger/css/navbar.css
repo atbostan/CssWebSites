@@ -13,7 +13,12 @@
     top: 0px;
     padding: 0 30px;
     z-index: 15;
+    transition: 0.5s; /*navbar disappear smoothly*/
 
+}
+
+.navbar.top{
+    background: transparent;
 }
 
 .navbar a {
