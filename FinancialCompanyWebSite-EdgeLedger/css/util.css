@@ -29,13 +29,17 @@
 }
 
 .btn-secondary{
-    color:snow;
-    background-color: #0284d0;
+    color:#0284d0;
+    background-color:snow ;
+}
+
+.btn-secondary:hover{
+    opacity: 0.8;
 }
 
 .btn-dark{
     color:snow;
-    background-color: #333;
+    background-color: #212121;
 }
 
 .btn-light{
@@ -55,7 +59,7 @@
 
 .bg-dark{
     color:snow;
-    background-color: #333;
+    background-color: #212121;
 }
 
 .bg-light{
@@ -91,6 +95,11 @@
 }
 
 /*Flex Columns*/
+
+.flex-columns.flex-reverse .row{
+    flex-direction: row-reverse;
+}
+
 .flex-columns .row {
     display: flex;
     flex-direction: row;
