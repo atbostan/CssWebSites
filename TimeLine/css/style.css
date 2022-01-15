@@ -1,0 +1,159 @@
+:root {
+  --primary-color: #425b84;
+  --secondary-color: #5b7bb4;
+  --max-width: 1100px;
+  --font-primary-color: snow;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+body {
+  font: normal 1rem/1.5 "Arial", sans-serif;
+  background-color: var(--primary-color);
+  color: var(--font-primary-color);
+  overflow-x: hidden;
+  padding-bottom: 50px;
+}
+
+#main-header {
+  background-color: var(--secondary-color);
+  padding: 4rem 0;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+#timeline ul {
+  background-color: var(--primary-color);
+  padding: 15px 0;
+}
+
+#timeline ul li {
+  list-style: none;
+  position: relative;
+  width: 6px; /*Shrink the li size*/
+  margin: 0 auto; /*Push into the middle*/
+  padding-top: 50px;
+  background-color: var(--font-primary-color);
+}
+
+#timeline ul li div {
+  position: relative;
+  bottom: 0;
+  width: 400px;
+  padding: 1rem;
+  background-color: var(--secondary-color);
+  transition: all 0.5s ease-in-out;
+  visibility: hidden; /*Just for make Js flow is work , every item shows if thw view port is available via show class*/
+  opacity: 0; /*Just for make Js flow is work , every item shows if thw view port is available via show class*/
+}
+
+/*Right side*/
+#timeline ul li:nth-child(odd) div {
+  left: 40px; /*Make the odds away from left to right*/
+  transform: translate(
+    200px,
+    0
+  ); /*Kutuların soldan sağa 200px açık başlayıp kapanmasını sağlar*/
+}
+
+/*Left side*/
+#timeline ul li:nth-child(even) div {
+  left: -464px; /*Make the evens close from left side of the viewport*/
+  transform: translate(
+    -200px,
+    0
+  ); /*Kutuların sağdan sola 200px açık başlayıp kapanmasını sağlar*/
+}
+
+/*Dots*/
+#timeline ul li::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 25px;
+  height: 25px;
+  background: inherit;
+  transform: translateX(-50%); /*Make the dot just above the time line*/
+  border-radius: 50%;
+  transition: background 0.5s ease-in-out;
+}
+
+/*Arrows Base */
+#timeline div:before {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+/*Right side arrows*/
+
+#timeline ul li:nth-child(odd) div::before {
+  left: -15px;
+  border-width: 8px 16px 8px 0; /*Make the right side of border more thick and so make sharpe in the end*/
+  border-color: transparent var(--secondary-color) transparent transparent; /*Make transparent ol border except right side*/
+}
+
+/*Left side arrows*/
+
+#timeline ul li:nth-child(even) div::before {
+  right: -15px;
+  border-width: 8px 0px 8px 16px;
+  border-color: transparent transparent transparent var(--secondary-color);
+}
+
+#timeline ul li.show div {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+
+#timeline ul li.show:after {
+  background: var(--secondary-color);
+}
+
+@media (max-width: 900px) {
+  #timeline ul li div {
+    width: 250px;
+  }
+
+  #timeline ul li:nth-child(even) div {
+    left: -248px;
+  }
+}
+
+@media (max-width: 600px) {
+  #timeline ul li {
+    margin-left: 20px; /*When the screen size under 600px it moves all time line elements to the left with the 20px margin*/
+  }
+
+  #timeline ul li div {
+    width: calc(
+      100vw-90px
+    ); /*90px ile 100vw arası ekran genişledikçe kendini ayarlar*/
+  }
+
+  #timeline ul li:nth-child(even) div {
+    left: 40px;
+  }
+
+  #timeline ul li:nth-child(even) div::before {
+    left: -15px;
+    border-width: 8px 16px 8px 0; /*Make the right side of border more thick and so make sharpe in the end*/
+    border-color: transparent var(--secondary-color) transparent transparent; /*Make transparent ol border except right side*/
+  }
+}
